@@ -282,6 +282,85 @@
         color: #0a1929;
       }
 
+      .logo-section {
+  padding: 40px 16px; /* smaller padding for mobile */
+  background: #f9fafb;
+  text-align: center;
+}
+
+.logo-section h2 {
+  font-size: 22px; /* mobile friendly */
+  margin-bottom: 24px;
+  color: #111;
+  font-weight: 600;
+}
+
+/* Grid */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 logos per row on mobile */
+  gap: 20px;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Logo Card Feel */
+.logo-grid img {
+  width: 100%;
+  height: 48px; /* smaller for mobile */
+  object-fit: contain;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+/* Touch friendly hover */
+.logo-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .logo-section h2 {
+    font-size: 26px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .logo-grid img {
+    height: 55px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .logo-section {
+    padding: 60px 20px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(7, 1fr); /* all logos in one row */
+  }
+
+  .logo-grid img {
+    height: 60px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+
       .features-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -630,7 +709,8 @@
 
       /* Responsive */
       @media (max-width: 768px) {
-
+        
+         
         .cta-section {
           padding:0;
         
@@ -656,9 +736,11 @@
           font-size: 1rem;
         }
 
-        nav ul {
-          margin-right:10px;
+        .nav-linkl {
+         margin-right:100px
           gap: 1rem;
+          border:2px solid red;
+  
         }
 
         .cta-group {
