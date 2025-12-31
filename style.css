@@ -657,7 +657,7 @@
         }
 
         nav ul {
-          flex-direction: column;
+          margin-right:10px;
           gap: 1rem;
         }
 
