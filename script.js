@@ -1,5 +1,4 @@
 const slides = Array.from(document.getElementsByClassName("slides"));
-const from = document.getElementById("UserForm");
  const current = 0;
 const id = {
   PUBID:"zapaFegkFQmmzyMHx",
@@ -31,20 +30,24 @@ function MainSlider() {
   }, 3500);
 }
 
+
 window.onload = () => {
   emailjs.init(id.PUBID);
+
+  const form = document.getElementById("UserForm");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    emailjs.sendForm(id.SERVID, id.TEMID, form)
+      .then(() => {
+        alert("Form submitted successfully!");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+        alert("Submission failed");
+      });
+  });
 };
 
-from.addEventListener("submit", (event) => {
-  event.preventDefault();
-  emailjs.sendForm(id.SERVID, id.TEMID,form).then(
-    () => {
-      console.log("SUCCESS!");
-      alert("submitted")
-    },
-    (error) => {
-      console.log("FAILED...", error);
-      alert("not submite")
-    }
-  );
-});
