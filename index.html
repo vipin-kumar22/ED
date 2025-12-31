@@ -73,29 +73,28 @@
 
     <!-- About Section -->
     <section class="about">
-  <h2>About Us</h2>
+      <h2>About Us</h2>
 
-  <img src="../../suraj/img/h1.png" alt="About LeadTech">
+      <img src="../../suraj/img/h1.png" alt="About LeadTech" />
 
-  <div class="about-content">
-    <p>
-      I am a BCA graduate with over 2 years of professional experience in
-      political consulting and election campaign management.
-    </p>
-    <p>
-      My work focuses on building data-driven strategies, executing impactful
-      digital campaigns, and managing strong on-ground operations to help
-      political leaders and organizations connect with voters and achieve
-      winning outcomes.
-    </p>
-    <p>
-      By combining technology, analytics, and grassroots execution, I deliver
-      practical and result-oriented campaign solutions tailored to real-world
-      political challenges.
-    </p>
-  </div>
-</section>
-
+      <div class="about-content">
+        <p>
+          I am a BCA graduate with over 2 years of professional experience in
+          political consulting and election campaign management.
+        </p>
+        <p>
+          My work focuses on building data-driven strategies, executing
+          impactful digital campaigns, and managing strong on-ground operations
+          to help political leaders and organizations connect with voters and
+          achieve winning outcomes.
+        </p>
+        <p>
+          By combining technology, analytics, and grassroots execution, I
+          deliver practical and result-oriented campaign solutions tailored to
+          real-world political challenges.
+        </p>
+      </div>
+    </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -272,71 +271,93 @@
     <section class="cta-section" id="contact">
       <div class="cta-head">
         <h2>Ready to Build a Winning Campaign?</h2>
-      <p>Let's partner with you to deliver extraordinary results.</p>
-      <button class="btn btn-primary">Get in Touch</button>
-
+        <p>Let's partner with you to deliver extraordinary results.</p>
+        <button class="btn btn-primary">Get in Touch</button>
       </div>
       <div id="GetInTouch">
-  <!-- Contact Form -->
-  <form id="UserForm">
+        <!-- Contact Form -->
+        <form id="UserForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required />
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone number"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address">City / Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Your city"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your message..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Submit</button>
+        </form>
+
+        <!-- Right Content -->
+        <div id="Get_Content">
+          <h1>
+            <span class="LS">s</span>un <span class="LS">R</span>efelection
+          </h1>
+          <p>
+            We provide advertisement and poster design services with both ground
+            and digital execution. Our campaigns run across multiple channels to
+            reach people effectively — online and on the ground.
+          </p>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required />
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Phone number" required />
-      </div>
-
-      <div class="form-group">
-        <label for="address">City / Address</label>
-        <input type="text" id="address" name="address" placeholder="Your city" required />
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        placeholder="Write your message..."
-        required
-      ></textarea>
-    </div>
-
-    <button type="submit" class="btn-submit">Submit</button>
-  </form>
-
-  <!-- Right Content -->
-  <div id="Get_Content">
-    <h1><span class="LS">S</span>un <span class="LS">R</span>efelection</h1>
-    <p>
-      We provide advertisement and poster design services with both ground and
-      digital execution. Our campaigns run across multiple channels to reach
-      people effectively — online and on the ground.
-    </p>
-  </div>
-</div>
-
     </section>
 
     <!-- Footer -->
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <h4>SR (Sun Refelection)
-          </h4>
+          <h4>SR (Sun Refelection)</h4>
           <p>
             India's premier political consulting and election campaign
             management firm, powered by data and innovation.
@@ -377,5 +398,10 @@
       </div>
     </footer>
   </body>
+
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
   <script src="script.js"></script>
 </html>
